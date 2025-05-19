@@ -1,0 +1,44 @@
+# This is a devicetree binding file in YAML format (usually named microchip,mic24045.yaml).
+# It tells Zephyr how to interpret a node like this in your overlay
+# mic24045@50 {
+#     compatible = "microchip,mic24045";
+#     reg = <0x50>;
+#     vin-supply = <&vbus>;
+# };
+
+
+# - This is the **matching string** for devicetree nodes.
+# - Any node in your `.overlay` or board `.dts` that says:
+#   compatible = "microchip,mic24045";
+compatible: "microchip,mic24045"
+description: Microchip MIC24045 I2C Buck Regulator
+
+# This line says "My MIC24045 device behaves like an I²C device and a regulator".
+# It inherits properties and constraints from those two Zephyr base bindings
+#   i2c-device.yaml   - reg property (I²C address), label, status, etc.
+#   regulator.yaml    - Hooks into the regulator subsystem
+include: ["i2c-device.yaml", "regulator.yaml"]
+
+
+# Properties:
+#  - `reg` is a **standard I²C property**.
+#      It sets the **I²C address** of the device (e.g., `<0x50>`).
+#      Marked as `required: true`, so you must include this in every devicetree node using this binding.
+#  - vin-supply is an optional property (not required).
+#      type: phandle means it refers to another node (e.g., a regulator or power rail).
+#      This allows Zephyr's power management to understand what powers this device.
+
+properties:
+  reg:
+    required: true
+  vin-supply:
+    type: phandle
+    required: false
+    description: Input voltage supply
+
+# Example usage in devicetree:
+#   mic24045@50 {
+#       compatible = "microchip,mic24045";
+#       reg = <0x50>;
+#       vin-supply = <&vbus>;
+#   };
