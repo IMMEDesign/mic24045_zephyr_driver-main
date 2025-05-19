@@ -5,6 +5,8 @@
 #include <zephyr/logging/log.h>
 #include "mic24045.h"
 
+#define DT_DRV_COMPAT microchip_mic24045
+
 LOG_MODULE_REGISTER(mic24045, CONFIG_REGULATOR_LOG_LEVEL);
 
 // ────── Voltage Conversion ──────
