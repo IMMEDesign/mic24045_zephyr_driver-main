@@ -1,1 +1,1 @@
-source "${ZEPHYR_MIC24045_MODULE_DIR}/drivers/regulator/mic24045/Kconfig"
+source "${ZEPHYR_MIC24045_DRIVER_MODULE_DIR}/drivers/regulator/mic24045/Kconfig"
