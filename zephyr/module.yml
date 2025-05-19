@@ -1,4 +1,4 @@
-name: MIC24045 stepdown regulator
+name: mic24045
 build:
   cmake: .
   kconfig: Kconfig
