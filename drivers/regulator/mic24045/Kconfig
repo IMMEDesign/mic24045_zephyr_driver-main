@@ -2,8 +2,8 @@
 
 config MIC24045
     bool "MIC24045 I2C Buck Regulator"
-    depends on I2C
-    select REGULATOR
+    depends on REGULATOR
+    select I2C
     help
       Enable support for the Microchip MIC24045 regulator.
 
