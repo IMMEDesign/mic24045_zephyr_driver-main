@@ -141,6 +141,3 @@ static const struct regulator_driver_api mic24045_api = {
                           &mic24045_api);
 
 DT_INST_FOREACH_STATUS_OKAY(MIC24045_DEFINE)
-
-#warning "MIC24045 driver included"
-
