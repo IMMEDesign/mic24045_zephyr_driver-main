@@ -1,3 +1,5 @@
-# Required to satisfy west build system.
-add_subdirectory_ifdef(CONFIG_REGULATOR regulator)
+# Subdirectories
+add_subdirectory(drivers)
 
+# Include headers
+zephyr_include_directories(drivers)
