@@ -1,11 +1,11 @@
+#define DT_DRV_COMPAT microchip_mic24045
+
 #include <zephyr/device.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/drivers/regulator.h>
 #include <zephyr/logging/log.h>
 #include "mic24045.h"
-
-#define DT_DRV_COMPAT microchip_mic24045
 
 LOG_MODULE_REGISTER(mic24045, CONFIG_REGULATOR_LOG_LEVEL);
 
@@ -141,3 +141,6 @@ static const struct regulator_driver_api mic24045_api = {
                           &mic24045_api);
 
 DT_INST_FOREACH_STATUS_OKAY(MIC24045_DEFINE)
+
+#warning "MIC24045 driver included"
+
