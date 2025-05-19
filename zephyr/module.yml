@@ -1,4 +1,4 @@
 name: MIC24045 stepdown regulator
 build:
   cmake: .
-  kconfig: drivers/Kconfig
+  kconfig: drivers/regulator/Kconfig
