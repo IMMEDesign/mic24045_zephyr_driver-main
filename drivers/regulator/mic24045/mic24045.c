@@ -3,6 +3,7 @@
 #include <zephyr/drivers/i2c.h>
 #include <zephyr/drivers/regulator.h>
 #include <zephyr/logging/log.h>
+#include "mic24045.h"
 
 LOG_MODULE_REGISTER(mic24045, CONFIG_REGULATOR_LOG_LEVEL);
 
