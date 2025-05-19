@@ -1,2 +1,2 @@
-rsource "drivers/regulator/Kconfig"
+rsource "regulator/Kconfig"
 

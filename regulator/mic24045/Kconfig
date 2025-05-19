@@ -1,6 +1,6 @@
 # Configuration options
 
-config REGULATOR_MIC24045
+config MIC24045
     bool "MIC24045 I2C Buck Regulator"
     depends on I2C
     select REGULATOR

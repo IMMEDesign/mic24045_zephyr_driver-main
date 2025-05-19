@@ -1,3 +1,3 @@
 # Required to satisfy west build system.
-add_subdirectory(drivers/regulator)
+add_subdirectory_ifdef(CONFIG_REGULATOR regulator)
 

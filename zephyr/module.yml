@@ -2,3 +2,5 @@ name: MIC24045 stepdown regulator
 build:
   cmake: .
   kconfig: Kconfig
+  settings:
+    dts_root: .
